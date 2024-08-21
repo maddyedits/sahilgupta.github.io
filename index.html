@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
      <head>
+      <meta charset="utf-8">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="mode.css">
-    </head>
+         </head>
    <style>  
       .about {
         font-family: sans-serif;
@@ -20,19 +21,19 @@
       width: 70%;
       padding: 10px;
       height: 100px;
-      margin-left: 10px;
+      margin-left: 50px;
       margin-top: 10px;
       font-size: 20px;
       margin-right:1080px;
       margin-bottom:0px;
-      color:#4C4C4C;
-          }
+      color:#4C4C4C;    
+      }
       .row:after {
       content: "";
       display: none;
       clear: none;
-    }   
-           .resume-button {
+    }  
+     .resume-button {
             background-color:#4C4C4C;
             color:white;
             border:none;
@@ -47,12 +48,12 @@
           }
                   .resume-button:hover {
            background-color: rgb(0, 179, 255);
-             box-shadow: 5px 5px 100px rgba(0, 179, 255, 1);        
-            }
+             box-shadow: 5px 5px 100px rgba(0, 179, 255, 1);
+                                }
             .span{
               color:white;
-            }            
-          .portfolio-button {
+            }
+                      .portfolio-button {
             background-color:#4C4C4C;
             border:none;
             height: 36px;
@@ -123,7 +124,9 @@
             margin-bottom: 2%;
             padding: 0;
             box-sizing: border-box;               
+
             } 
+
            .boxl2{
             font-size: 25px;
             margin-top: 0px;
@@ -131,6 +134,7 @@
             margin-bottom: 0;
             line-height: 0;    
             box-sizing: border-box;            
+
            }
           .intro{
             position: absolute;
@@ -154,7 +158,7 @@
                    margin-left: 0px;
                     color: #4C4C4C;
           }        
-        *{
+         *{
           margin:0;
           padding: 0;
           box-sizing: border-box;
@@ -165,7 +169,8 @@
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          justify-content:space-between ;          
+          justify-content:space-between ;
+          
           }
           *{
           margin: 0;
@@ -180,7 +185,7 @@
           display: flex;
           justify-content: left;
           flex-wrap: wrap;
-          margin-top: 15px;   
+          margin-top: 15px;            
         }
         .card{
           width: 325px;         
@@ -204,7 +209,8 @@
           color:#666;
           font-size: 15px;
           line-height: 1.3;
-                  }     
+          
+        }     
          .text{
           width: 250px;
           height: 25px;
@@ -324,6 +330,7 @@ body {
   margin-top: 10px;
   width: 150%;
 }
+
 .education-item {
   display: flex;
   flex-direction: row;
@@ -340,6 +347,7 @@ body {
   object-fit: cover;
   margin-right: 20px;
 }
+
 .education-text {
   display: flex;
   flex-direction: column;
@@ -357,7 +365,8 @@ input:checked + .slider {
 }
 input:checked + .slider:hover{
   background-color: rgb(89, 255, 0);
-             box-shadow: 5px 5px 100px rgb(51, 255, 0);
+             box-shadow: 5px 5px 100px rgb(51, 255, 0);           
+        
 }
 input:checked + .slider:before {
   transform: translateX(26px);
@@ -365,18 +374,26 @@ input:checked + .slider:before {
 .dark-mode {
   background: #18191A;
 }
+
 .dark-mode h1 {
-  color: #808080; 
+color: #808080; 
 }
+.dark-mode .boxl2{
+  margin-left: 250px;
+}
+
 .dark-mode .about {
   color: #808080;
 }
+
 .dark-mode .column {
   color: #808080;
 }
+
 .dark-mode .tech {
   color: #808080;
 }
+
 .dark-mode .text {
   color: #808080; 
 }
@@ -386,6 +403,7 @@ input:checked + .slider:before {
 .dark-mode .card-content{
   color: #808080; 
 }
+
       a:link {
             text-decoration: none;
           }
@@ -397,9 +415,11 @@ input:checked + .slider:before {
           }
           a:active {
             text-decoration: none;
-          }
+          }  
           </style>
-          <body>          
+ 
+         <body>
+          
           <title>Sahil</title> 
           <div class="intro">
           <img class="sahil" src="Sahil.jpg" id="profile-picture">       
@@ -421,7 +441,8 @@ input:checked + .slider:before {
                  element.classList.toggle("dark-mode");
                  changeProfilePicture();   
                  changeName(); 
-               
+                 changepara();  
+                 changeAboutPara();                                 
               }
               function changeProfilePicture() {
       var profilePicture = document.getElementById("profile-picture");
@@ -437,9 +458,18 @@ function changeName() {
     nameElement.textContent = "Maddy";
   } else {
     nameElement.textContent = "Sahil";
-  }
+  } 
 }
-            </script>
+function changepara() {
+  var paraElement = document.querySelector(".boxl2");
+  if (document.body.classList.contains("dark-mode")) {
+    paraElement.textContent = "Let's create this";
+    } else {
+      paraElement.textContent = "Let's unlock the power of data together";
+     }  
+    
+  }
+         </script>
             <p class="sw-name">Another side</p>
               <p class="about">
                 About Me      
@@ -447,18 +477,56 @@ function changeName() {
                 <div>
                   <div class="row">
           <div class="column" >
-                <p>Hi there! I'm Sahil Gupta, a passionate data analyst with a knack for turning complex datasets into clear, 
-                  actionable insights. With expertise in statistical analysis, data visualization, and predictive modeling, 
-                  I love diving into numbers and uncovering stories that drive better business decisions. 
-                  Whether it's through SQL, Python, R, or Excel, I thrive on solving data puzzles and making data-driven strategies come to life.
-                  
-                </p>
-                <p>          
-        <a href="https://drive.google.com/file/d/1fcA38lclbR1ZElveC3O6qpgzxdHjDjwQ/view" target= _blank>
+                <p id="about-para">
+                  Hi there! I'm Sahil Gupta, a passionate data analyst with a knack for turning complex datasets into clear,
+                  actionable insights. With expertise in statistical analysis, data visualization, and predictive modeling,I
+                   love diving into numbers and uncovering stories that drive better business decisions.Whether it's through SQL,
+                    Python, R, or Excel, I thrive on solving data puzzles and making data-driven strategies come to life
+                  </p>
+                <p>   
+                  <script>
+                    function changeMode() {
+                      var element = document.body;
+                      element.classList.toggle("dark-mode");
+                      changeProfilePicture();
+                      changeName();
+                      changepara();
+                      changeAboutPara();
+                    }                   
+                    function changeAboutPara() {
+                      var aboutPara = document.getElementById("about-para");
+                      if (document.body.classList.contains("dark-mode")) {
+                        aboutPara.textContent = "I am Sahil Gupta, a video editor with three years of experience, I specialize in crafting visually engaging content using Adobe After Effects and Premiere Pro. My expertise lies in creating dynamic motion graphics, seamless transitions, and polished edits that bring stories to life. I am committed to delivering high-quality work that meets client expectations and enhances the viewer's experience. Whether it's a corporate video, a social media clip, or a short film, I bring creativity and technical skill to every project I undertake.";
+                      } else {
+                        aboutPara.textContent = "Hi there! I'm Sahil Gupta, a passionate data analyst with a knack for turning complex datasets into clear, actionable insights. With expertise in statistical analysis, data visualization, and predictive modeling,I love diving into numbers and uncovering stories that drive better business decisions.Whether it's through SQL, Python, R, or Excel, I thrive on solving data puzzles and making data-driven strategies come to life";
+                      }
+                    }
+                  </script>       
+        <a href="" target= _blank>
         <button class="resume-button">
           <span class="span">Resume</span>         
         </a>
         </button>          
+        <script>
+          function changeMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            changeProfilePicture();
+            changeName();
+            changepara();
+            changeAboutPara();
+            changeResumeLink();
+          }
+        
+          function changeResumeLink() {
+            var resumeLink = document.querySelector(".resume-button a");
+            if (document.body.classList.contains("dark-mode")) {
+              resumeLink.href = "https://drive.google.com/file/d/1fcA38lclbR1ZElveC3O6qpgzxdHjDjwQ/view"; 
+            } else {
+              resumeLink.href = ""; 
+            }
+          }
+        </script>
                 </p>
                 <p>  
               <a href="https://www.linkedin.com/in/sahilguptave"target="_blank">                  
@@ -473,19 +541,19 @@ function changeName() {
              </div> 
              <div class="flex-container">
              <div class="text">          
-              <img class="ms" src="MsExel.png"width="40" height="25">
+              <img class="ms" src="MsExel.png"width="45" height="30">
              <span>MsExel </span>                          
              </div>
              <div class="text">
-              <img class="my" src="MySQL.png"  width="40" height="25">
+              <img class="my" src="MySQL.png"  width="40" height="40">
               <span >MySQL </span>
              </div>
             <div class="text">
-              <img class="talbe" src="Tableau.png" width="25" height="25">
+              <img class="talbe" src="Tableau.png" width="40" height="40">
               <span >Tableau </span>
             </div>
             <div class="text">
-              <img class="python" src="Python.png" width="25" height="25">
+              <img class="python" src="Python.png" width="40" height="40">
               <span >Python </span> 
               </div>    
             </div>
@@ -521,6 +589,49 @@ function changeName() {
                   </div>
                 </div>
               </div>
+              <script>
+                function changeMode() {
+                  var element = document.body;
+                  element.classList.toggle("dark-mode");
+                  changeProfilePicture();
+                  changeName();
+                  changepara();
+                  changeAboutPara();
+                  changeResumeLink();
+                  changeTechStack();
+                }
+              function changeTechStack() {
+                var techStackImages = document.querySelectorAll(".text img");
+                var techStackNames = document.querySelectorAll(".text span");
+                if (document.body.classList.contains("dark-mode")) {
+                  techStackImages[0].src = "after-effects.png";
+                  techStackNames[0].textContent = "After effects";
+                   techStackImages[0].width = "40"; 
+                   techStackImages[0].height = "40";
+                  techStackImages[1].src = "premierepro.png";
+                  techStackNames[1].textContent = "Premiere pro";
+                  techStackImages[1].width = "40"; 
+                  techStackImages[1].height = "40";
+                  techStackImages[2].src = "photoshop.png";
+                  techStackNames[2].textContent = "Photoshop";
+                  techStackImages[2].width = "40"; 
+                  techStackImages[2].height = "40";
+                  techStackImages[3].src = "illustrator.png";
+                  techStackNames[3].textContent = "Illustrator";
+                  techStackImages[3].width = "40"; 
+                  techStackImages[3].height = "40";
+                } else {
+                  techStackImages[0].src = "MsExel.png";
+                  techStackNames[0].textContent = "MsExel";
+                  techStackImages[1].src = "MySQL.png";
+                  techStackNames[1].textContent = "MySQL";
+                  techStackImages[2].src = "Tableau.png";
+                  techStackNames[2].textContent = "Tableau";
+                  techStackImages[3].src = "Python.png";
+                  techStackNames[3].textContent = "Python";
+                }
+              }
+            </script>
               <div class="tech">
                 <p >
                   Projects
@@ -541,14 +652,14 @@ function changeName() {
                           </div>
                           <div class="card-container">
                             <div class="card">
-                              <img src="Instagram.png">
+                              <img src="Project3.png">
                               <div class="card-content">
                                 <h3 class="text03">Operation Analytics and Investigating Metric Spike</h3>
                                 <p class="text04">n this project, you'll take on the role of a Lead Data Analyst at a company like Microsoft.
                                    Provided with various datasets and tables, and your task will be to derive insights from this data to answer questions posed by different departments
                                     within the company. Your goal is to use your advanced SQL skills to analyze the data and provide valuable insights that can help improve the company's operations
                                      and understand sudden changes in key metrics. </p> 
-                                    <a href="https://drive.google.com/drive/folders/1O4PyzQO6d4qG4laFd-HIecgzidn38O-i?usp=sharing" target= _blank>
+                                    <a href="https://drive.google.com/drive/folders/1MWzWnj_b_q0H-TEa-PCCeRpRdGOQ_YBA?usp=sharing" target= _blank>
                                       <button class="resume-button">
                                         <span class="span">Read More</span>         
                                       </a>  
