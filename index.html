@@ -508,13 +508,13 @@ function changepara() {
             changeResumeLink();
           }        
           function changeResumeLink() {
-            var resumeLink = document.querySelector(".resume-button a");
-            if (document.body.classList.contains("dark-mode")) {
-              resumeLink.href = "https://drive.google.com/file/d/19KjVxRV-LDClWlWuVj7U8fkIV4_qZhRC/view?usp=sharing"; 
-            } else {
-              resumeLink.href = "https://drive.google.com/file/d/16x3AeUfqtEPzFOeHIr9Sc00H5_zb82SO/view?usp=sharing"; 
-            }
-          }
+              var resumeLink = document.querySelector(".resume-button a");
+                if (document.body.classList.contains("dark-mode")) {
+                      resumeLink.href = "https://drive.google.com/file/d/16x3AeUfqtEPzFOeHIr9Sc00H5_zb82SO/view?usp=sharing"; 
+                      } else {
+                        resumeLink.href = "https://drive.google.com/file/d/19KjVxRV-LDClWlWuVj7U8fkIV4_qZhRC/view?usp=sharing"; 
+                       }
+}
         </script>
                 </p>
                 <p>  
@@ -652,7 +652,66 @@ function changepara() {
                                       <button class="resume-button">
                                         <span class="span">Read More</span>         
                                       </a>  
-                                    </div>                
-                                  </div>
-                        </body>
-                      </html>
+                                    </div> 
+                                  </div>                                   
+                                  <button class="portfolio-button" id="portfolio" style="display: none;">
+                                    <span class="span">Portfolio</span>
+                                  </button>
+                                </div>        
+                                  </div> 
+                                  <script>
+                                 function changeMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+  changeProfilePicture();
+  changeName();
+  changepara();
+  changeAboutPara();
+  changeResumeLink();
+  changeTechStack();
+  changeProjectSection();
+}
+function changeProjectSection() {
+  var projectSection = document.querySelector(".card-container");
+  var portfolioButton = document.getElementById("portfolio");
+  if (document.body.classList.contains("dark-mode")) {
+    projectSection.innerHTML = `<a href="http://bento.me/maddyworks" target="_blank">
+                                  <button class="portfolio-button" id="portfolio">
+                                    <span class="span">Portfolio</span>
+                                  </button>
+                                </a>`;
+  } else {
+    projectSection.innerHTML = `
+      <div class="card">
+        <img src="Instagram.png">
+        <div class="card-content">
+          <h3 class="text03">Instagram User analysis</h3>
+          <p class="text04">In this project, I used SQL and MySQL Workbench as your tool to analyze
+             Instagram user data and answer questions posed by the management team. Insights will help the
+              product manager and the rest of the team make informed decisions about the future direction of the Instagram app. </p> 
+              <a href="https://drive.google.com/drive/folders/1O4PyzQO6d4qG4laFd-HIecgzidn38O-i?usp=sharing" target= _blank>
+                <button class="resume-button">
+                  <span class="span">Read More</span>         
+                </a>  
+              </div>                
+            </div>
+            <div class="card">
+              <img src="Project3.png">
+              <div class="card-content">
+                <h3 class="text03">Operation Analytics and Investigating Metric Spike</h3>
+                <p class="text04">n this project, you'll take on the role of a Lead Data Analyst at a company like Microsoft.
+                   Provided with various datasets and tables, and your task will be to derive insights from this data to answer questions posed by different departments
+                    within the company. Your goal is to use your advanced SQL skills to analyze the data and provide valuable insights that can help improve the company's operations
+                     and understand sudden changes in key metrics. </p> 
+                    <a href="https://drive.google.com/drive/folders/1MWzWnj_b_q0H-TEa-PCCeRpRdGOQ_YBA?usp=sharing" target= _blank>
+                      <button class="resume-button">
+                        <span class="span">Read More</span>         
+                      </a>  
+                    </div> 
+                  </div>
+                `;
+  }
+}
+  </script>                       
+                       </body>
+                      </html>                                         
